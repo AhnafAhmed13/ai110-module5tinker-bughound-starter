@@ -48,10 +48,12 @@ class GeminiClient:
         heuristic fallback logic.
         """
         try:
+            merged_prompt = f"{system_prompt}\n\n{user_prompt}".strip()
             response = self.model.generate_content(
                 [
-                    {"role": "system", "parts": [system_prompt]},
-                    {"role": "user", "parts": [user_prompt]},
+                    # {"role": "system", "parts": [system_prompt]},
+                    # {"role": "user", "parts": [user_prompt]},
+                    {"role": "user", "parts": [merged_prompt]},
                 ],
                 generation_config={"temperature": self.temperature},
             )
