@@ -107,3 +107,10 @@ You should see tests covering:
 * Risk scoring and guardrails
 * Heuristic fallbacks when LLM output is invalid
 * End-to-end agent workflow shape
+
+
+---
+
+# TF Summary
+
+Students need to understand how agentic systems work and how to add guardrails around LLM generated output. Students are most likely to struggle with running into deprecated gemini API request bug and hitting the daily API limit. AI was helpful in brainstorming ideas to improve the reliability and risk assessment of LLM generated output. AI was misleading when it suggested excessive refactors that broke the data pipeline. I would guide a student by asking them to understand the logic flow: analyze -> propose fix -> risk assessment -> test, and identify when it uses LLM vs heuristic.
